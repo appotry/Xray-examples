@@ -6,12 +6,7 @@
             "port": 11451,
             "protocol": "hysteria",
             "settings": {
-                "version": 2,
-                "clients": [
-                    {
-                        "auth": "114514" // Hysteria2 密码
-                    }
-                ]
+                "version": 2
             },
             "streamSettings": {
                 "network": "hysteria",
@@ -30,7 +25,8 @@
                     ] // 证书设置
                 },
                 "hysteriaSettings": {
-                    "version": 2
+                    "version": 2,
+                    "auth": "114514" // Hysteria 密码
                 },
                 "finalmask": {
                     "udp": [

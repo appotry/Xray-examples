@@ -1,0 +1,39 @@
+{
+    "outbounds": [
+        {
+            "tag": "proxy",
+            "protocol": "hysteria",
+            "settings": {
+                "address": "server ip",
+                "port": 11451,
+                "version": 2
+            },
+            "streamSettings": {
+                "network": "hysteria",
+                "security": "tls",
+                "tlsSettings": {
+                    "serverName": "114514" // SNI
+                },
+                "hysteriaSettings": {
+                    "version": 2,
+                    "auth": "114514" // Hysteria 密码
+                },
+                "finalmask": {
+                    "udp": [
+                        {
+                            "type": "salamander",
+                            "settings": {
+                                "password": "114514" // salamander 混淆密码
+                            }
+                        }
+                    ],
+                    "quicParams": {
+                        "congestion": "bbr", // 可改为 brutal，若如此做请自行修改下面宽带
+                        "brutalUp": "30 mbps",
+                        "brutalDown": "100 mbps"
+                    }
+                }
+            }
+        }
+    ]
+}

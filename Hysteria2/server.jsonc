@@ -29,14 +29,6 @@
                     "auth": "114514" // Hysteria 密码
                 },
                 "finalmask": {
-                    "udp": [
-                        {
-                            "type": "salamander",
-                            "settings": {
-                                "password": "114514" // salamander 混淆密码
-                            }
-                        }
-                    ], // salamander 混淆，不需要可以删除此项
                     "quicParams": {
                         "congestion": "brutal",
                         "brutalUp": "100 mbps",
@@ -44,6 +36,11 @@
                     }
                 }
             }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
         }
     ]
 }

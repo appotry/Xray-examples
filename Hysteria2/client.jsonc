@@ -1,4 +1,14 @@
 {
+    "inbounds": [
+        {
+            "port": 10800,
+            "listen": "127.0.0.1",
+            "protocol": "socks",
+            "settings": {
+                "udp": true
+            }
+        }
+    ],
     "outbounds": [
         {
             "tag": "proxy",
@@ -19,14 +29,6 @@
                     "auth": "114514" // Hysteria 密码
                 },
                 "finalmask": {
-                    "udp": [
-                        {
-                            "type": "salamander",
-                            "settings": {
-                                "password": "114514" // salamander 混淆密码
-                            }
-                        }
-                    ],
                     "quicParams": {
                         "congestion": "bbr", // 可改为 brutal，若如此做请自行修改下面宽带
                         "brutalUp": "30 mbps",
